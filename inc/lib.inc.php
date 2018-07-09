@@ -1,10 +1,14 @@
-function drawTable ($rows, $cols) {
+<?php
+function drawTable ($cols, $rows, $color) {
 
   echo '<table border="1" width="200">';
     for ($i=1; $i <= $rows; $i++) { 
       echo '<tr>';
         for ($a=1; $a <= $cols; $a++) { 
-          echo '<td>'. $i * $a . '</td>';
+          if($i == 1 or $a == 1)
+            echo "<th style='background-color: $color;'>". $i * $a . '</th>';
+          else
+            echo '<td>'. $i * $a . '</td>';
         }
       echo '</tr>';
     }
@@ -23,3 +27,4 @@ function drawTable ($rows, $cols) {
     echo '</ul>';
 
     }
+?>

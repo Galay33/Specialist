@@ -1,4 +1,4 @@
- <hr>
+	<hr>
     <?php 
       drawMenu($leftMenu, false);
     ?>
